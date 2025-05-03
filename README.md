@@ -1,16 +1,68 @@
-# my_transactions
 
-A new Flutter project.
+## 🧾 My Transactions - Flutter App
 
-## Getting Started
+This is a lightweight, responsive **Transaction Activity** UI built with Flutter and BLoC. It displays a list of mock transactions, allows dynamic filtering by status, and includes responsive layout and animations.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://github.com/user-attachments/assets/7b88ad6e-117c-4c2c-92da-831ab27c3ffc
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+### ✨ Features
+
+- 📋 Displays a list of 5 mock transactions
+- 🔍 Filter by status: **All**, **Successful**, **Pending**, **Failed**
+- 🧠 Uses **BLoC** for state management (events, states, business logic)
+- 🎞️ Smooth **fade transition animation** between filtered items
+- 📱💻 Responsive design for **mobile and web**
+- 🚫 Fallback UI when no transactions match the filter
+
+---
+
+### 🗂️ Project Structure
+
+```
+lib/
+├── bloc/
+│   ├── bloc.dart       # Business logic for filtering
+│   ├── event.dart      # Events for triggering state changes
+│   └── state.dart      # Holds UI state (filtered list + filter)
+│
+├── models/
+│   └── transaction.dart     # Enum and data class for transactions
+│
+├── screens/
+│   └── filter_chips.dart    # Responsive filter layout
+│   └── list_view.dart       # Animated list view
+│   └── transactions.dart    # Main UI screen
+│
+└── main.dart                # App entry point
+```
+
+---
+
+### 📦 Dependencies
+
+Add these to `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  animated_list_plus: ^0.5.2
+```
+
+---
+
+### 🚀 Getting Started
+
+```bash
+git clone https://github.com/blackorbs-dev/my_transactions
+cd my_transactions
+flutter pub get
+flutter run
+```
+
+---
